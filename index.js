@@ -38,8 +38,8 @@ async function sendMail(item,address) {
         await transporter.sendMail({
             from: `"Bomb"<${config.email}>`,
             to: address,
-            subject: `Твоя роль в BOMB ${item.name}`,
-            html: `<img src="cid:role" width="400px">`,
+            subject: `Твоя роль в BOMB`,
+            html: `<h1>${item.name}</h1><br><img src="cid:role" style="width: 400px">`,
             attachments:[
                 {
                     filename: item.filename,
