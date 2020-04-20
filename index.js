@@ -19,6 +19,7 @@ const transporter = nodemailer.createTransport({
 // извлекаем список email адресов
 const mails = fs.readFileSync(path.resolve(__dirname,fileWithMails),'utf8')
                 .split("\n");
+console.log(mails,mails.length);
 
 if(mails.length > roles.length) nodeExit('Игроков больше чем ролей');
 
